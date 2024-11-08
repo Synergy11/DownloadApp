@@ -1,10 +1,5 @@
-export const item =[
-  {title: "quality"},
-  {title: "MB Size"},
-  {title: "Download"}
-]
+import { VideoDetails } from "../Items/items";
 function BodyView() {
-  console.log(item);
   return (
     <div className="container rounded text-center mt-5 p-5 bg-body-tertiary">
       <label className="form-label fs-1">Download video from All Media</label>
@@ -21,26 +16,30 @@ function BodyView() {
           value={"Download"}
         />
       </div>
-      <p>By using our service you are accepting our <a href="#" className="text-danger ">Terms of Use.</a></p>
+      <p>
+        By using our service you are accepting our{" "}
+        <a href="#" className="text-danger ">
+          Terms of Use.
+        </a>
+      </p>
 
-      <div className="container text center" >
+      <div className="container text center">
         <div className="row ">
-        <div className="col-auto">
-          {/* video image link  */}
-        </div>
-        <div className="col-auto">
-              <h4>video detail</h4>
-              <div className="row text-center">
-                <div className="col">quality</div>
-                <div className="col">MB Size</div>
-                <div className="col">Download</div>
-              </div>
-        </div>
+          <div className="col-auto">{/* video image link  */}</div>
+          <div className="col-auto">
+            <h4>Video Detail</h4>
+            <div className="row text-center">
+              {VideoDetails.map((videoDetails, index) => (
+                <div className="col" key={index}>
+                  {videoDetails.title}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
 
 export default BodyView;

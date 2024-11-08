@@ -1,7 +1,7 @@
 
   function BodyPart() {
     return (
-      <div className="container text-cnter">
+      <div className="container text-center">
       <h3 className="text-center mt-4 text-info">YouTube Video Downloader</h3>
       <p className="text-center m-3">
         <b>VideoAnyWhere</b> allows you to convert & download video from YouTube,
