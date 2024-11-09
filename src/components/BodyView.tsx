@@ -1,5 +1,7 @@
 import { VideoDetails } from "../items/items";
 import { Video } from "../items/items";
+import { VideoTable } from "./videoTable";
+import "../styles/Video.css";
 
 function BodyView() {
   return (
@@ -28,19 +30,17 @@ function BodyView() {
       <div className="container text center">
         <div className="row ">
           <div className="col-auto">
-            <img src={Video.image} alt="" />
-          </div>
-          <div className="col-auto">
-            <h4>Video Detail</h4>
-            <div className="row text-center">
-              {VideoDetails.map(
-                (videoDetails: { title: string }, index: number) => (
-                  <div className="col" key={index}>
-                    {videoDetails.title}
-                  </div>
-                )
-              )}
-            </div>
+            {Video.map((video: Video, index: number) => (
+              <div key={index} className="videoContainer">
+                <div className="leftVideo">
+                  <img src={video.image} alt="" />
+                  <h5 className="">{video.title}</h5>
+                </div>
+                <div className="rightVideo">
+                  <VideoTable videoDetail: VideoDetails={video} />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,0 +1,55 @@
+.title{
+    display: flex;
+    gap:5px;
+}
+.title h4.active{
+   background-color: rgb(215, 215, 215);
+   border: 1px solid gray;
+   border-bottom: none;
+}
+.title h4{
+    align-items: center;
+    padding: 10px 14px;
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.title h4:nth-child(1){
+    color: #fd474c;
+}
+.title h4:nth-child(2){
+    color: gray;
+}
+.premium{
+    display: flex;
+    justify-content:center ;
+    margin-top: -8px;
+    width: 600px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:1px solid rgb(178, 178, 178);
+}
+.premium button{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    border-radius: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    background-color: rgb(48, 215, 48);
+    color: white;
+}
+.download{
+    display: flex;
+    justify-content:center ;
+    width: 600px;
+    min-height: 200px;
+    border:1px solid rgb(178, 178, 178);
+    border-top: none;
+}
