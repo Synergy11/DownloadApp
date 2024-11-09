@@ -1,4 +1,6 @@
-import { VideoDetails } from "../Items/items";
+import { VideoDetails } from "../items/items";
+import { Video } from "../items/items";
+
 function BodyView() {
   return (
     <div className="container rounded text-center mt-5 p-5 bg-body-tertiary">
@@ -25,15 +27,19 @@ function BodyView() {
 
       <div className="container text center">
         <div className="row ">
-          <div className="col-auto">{/* video image link  */}</div>
+          <div className="col-auto">
+            <img src={Video.image} alt="" />
+          </div>
           <div className="col-auto">
             <h4>Video Detail</h4>
             <div className="row text-center">
-              {VideoDetails.map((videoDetails, index) => (
-                <div className="col" key={index}>
-                  {videoDetails.title}
-                </div>
-              ))}
+              {VideoDetails.map(
+                (videoDetails: { title: string }, index: number) => (
+                  <div className="col" key={index}>
+                    {videoDetails.title}
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
