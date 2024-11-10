@@ -1,4 +1,3 @@
-import { VideoDetails } from "../items/items";
 import { Video } from "../items/items";
 import { VideoTable } from "./videoTable";
 import "../styles/Video.css";
@@ -26,11 +25,10 @@ function BodyView() {
           Terms of Use.
         </a>
       </p>
-
       <div className="container text center">
         <div className="row ">
           <div className="col-auto">
-            {Video.map((video: Video, index: number) => (
+            {Video.map((video: {image:string,title:string}, index: number) => (
               <div key={index} className="videoContainer">
                 <div className="leftVideo">
                   <img src={video.image} alt="" />
