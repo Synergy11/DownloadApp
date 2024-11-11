@@ -1,3 +1,7 @@
+*{
+    --width: 500px;
+    --table-padding: 500px;
+}
 .title{
     display: flex;
     gap:5px;
@@ -27,12 +31,12 @@
     display: flex;
     justify-content:center ;
     margin-top: -8px;
-    width: 600px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: var(--width);
+    padding-top: 15px;
+    padding-bottom: 15px;
     border:1px solid rgb(178, 178, 178);
 }
-.premium button{
+button{
     width: 80%;
     display: flex;
     justify-content: center;
@@ -46,10 +50,21 @@
     color: white;
 }
 .download{
-    display: flex;
-    justify-content:center ;
-    width: 600px;
-    min-height: 200px;
+    width: var(--width);
+    min-height: 100px;
     border:1px solid rgb(178, 178, 178);
     border-top: none;
+}
+.download thead, .download tbody{
+    border-top: 1px solid gray;
+}
+.download thead tr, .download tbody tr{
+  height: 50px;
+}
+.download thead tr th, .download tbody tr td{
+    border-right: 1px solid gray;
+}
+.center{
+    display: flex;
+    justify-content: center;
 }

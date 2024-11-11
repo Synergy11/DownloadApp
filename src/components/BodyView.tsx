@@ -27,18 +27,18 @@ function BodyView() {
       </p>
       <div className="container text center">
         <div className="row ">
-          <div className="col-auto">
+          <div className="flex">
             {Video.map((video: {image:string,title:string}, index: number) => (
               <div key={index} className="videoContainer">
                 <div className="leftVideo">
                   <img src={video.image} alt="" />
                   <h5 className="">{video.title}</h5>
                 </div>
-                <div className="rightVideo">
-                  <VideoTable videoDetail: VideoDetails={video} />
-                </div>
               </div>
             ))}
+                <div className="rightVideo">
+                  <VideoTable videoDetail ={Video} />
+                </div>
           </div>
         </div>
       </div>
